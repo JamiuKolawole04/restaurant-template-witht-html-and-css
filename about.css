@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./Sans/OpenSans-Light.woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./Sans/OpenSans-SemiBold.woff") format("woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./Sans/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Cookie";
+    src: url("./Cookie/Cookie-Regular.woff") format("woff");
+}
+
+* {
+    font-family: "Open Sans";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url("./images/Hero\ img5.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 168px;
+    padding-bottom: 180px
+}
+
+header p {
+    font-size: 74px;
+    color: var(--white);
+}
+
+header p span, 
+.story-header__text span,
+.chef-header__text span {
+   color: var(--color4);
+}
+
+.top-padding {
+    padding-right: 84px;
+    padding-left: 160px;
+    padding-bottom: 40px;
+    padding-top: 68px;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-flex-start {
+    justify-content: flex-start;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.white-background {
+    background-color: var(--white);
+}
+
+:root {
+    --color1 : #FF7400;
+    --color2 : #BC9060;
+    --color3 : #2C2C2C;
+    --color4 :#D67E34;
+    --white: white;
+    --bold:  bold;
+}
+
+.story-header__text,
+.chef-header__text {
+    color: black;
+    font-size: 54px;
+    line-height: 60px;
+    font-weight: 200;
+}
+
+.story-subheader__text {
+    margin-top: -36px;
+}
+
+.cook-text {
+    margin-top: -16px;
+}
+
+.nolan-text {
+    color: black;
+    font-weight: 600;
+}
+
+
+.story-subheader__text,
+.cook-text {
+    color: #656363;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+
+.cookie {
+    font-family: "Cookie";
+}
+
+#story .image__wrapper {
+    margin-top: 40px;
+}
+
+.pic1__div {
+    z-index: 2;
+    margin-top: 32px;
+}
+
+
+.pic2__div {
+    margin-left: -76px;
+}
+
+.pic3__div {
+    margin-top: -240px;
+    margin-left: 320px;
+    z-index: 2;
+}
+
+#menu {
+    background-image: url("./images/Hero\ img6.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.menu-text {
+    color: var(--color4);
+    font-size: 52px;
+    line-height: 71px;
+    font-weight: 600;
+}
+
+.menu-subtext {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    color: var(--white);
+    margin-top: -52px;
+}
+
+#chef {
+    margin-top: 48px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}

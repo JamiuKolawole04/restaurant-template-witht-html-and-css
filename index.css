@@ -1,0 +1,838 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./Sans/OpenSans-Light.woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./Sans/OpenSans-SemiBold.woff") format("woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./Sans/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Cookie";
+    src: url("./Cookie/Cookie-Regular.woff") format("woff");
+}
+
+* {
+    font-family: "Open Sans";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+main, section, footer {
+    display: block;  /* for old browsers that do not support this senmatic */
+}
+
+.column {
+    flex-direction: column;
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.items-center {
+    align-items: center;
+}
+.center-text {
+    text-align: center;
+}
+
+.icon__container {
+    display: inline-block;
+    margin-top: 16px;
+    margin-left: 12px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+ }
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+ }
+
+nav ul {
+    margin-top: -20px;
+    margin-left: 24px;
+ }
+
+nav ul li {
+    list-style-type: none;
+    padding: 12px 0;
+    margin-top: 28px;
+}
+nav ul li a {
+    color: white;
+}
+
+.mobile-nav-div {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    z-index: 300;
+    overflow: hidden;
+    text-align: left;
+    transition: all 0.5s ease-out, background 1s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-nav-div {
+        position: fixed;
+    }
+}
+
+.nav-closed {
+    height: 68px;
+    background-color: rgba(255, 116, 0, 0.8);
+    transition: all 0.8s ease-out, background 1.2s ease-in;
+}
+
+
+
+header {
+    background-image: url('images/Hero\ img1.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1272.98px) {
+    .desktop__view {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .mobile__view {
+        display: none;
+    }
+}
+
+
+ul {
+    list-style-type: none;
+}
+nav ul#horizontal__list {
+    margin-left: 180px;
+}
+nav ul#horizontal__list li {
+    display: inline-block;
+    padding: 0 0 0 20px;
+}
+
+nav ul#horizontal__list a {
+    color: white;
+    font-weight: var(--bold);
+    font-size: 14px;
+    line-height: 19px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.ml-8 {
+    margin-left: 8px;
+}
+
+:root {
+    --color1 : #FF7400;
+    --color2 : #BC9060;
+    --color3 : #2C2C2C;
+    --color4 :#D67E34;
+    --white: white;
+    --bold:  bold;
+}
+
+.separation__stroke {
+    border: 1px solid white;
+    width: 51px;
+    height: 0;
+    transform: rotate(90deg);
+}
+
+p.contact__info {
+    color: var(--white);
+}
+
+header, section.story, section .celebrate__section,
+section .offers__section,section .check__menu,
+section .testimonial__container, section .food-chef__container, section .bg-hero4{
+    padding-right: 84px;
+    padding-left: 160px;
+}
+
+
+header, section.story {
+   padding-top: 28px;
+   padding-bottom: 180px !important;
+}
+
+
+.contact__number {
+    color: var(--white);
+    font-weight: var(--bold);
+    line-height: 25px;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.contact__info {
+    color: var(--white);
+    margin-top: -4px;
+}
+img.cart__image {
+    margin-left: 40px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.booking__btn, button.view-menu__btn, button.get-offer__btn, button.order-now__btn {
+    background-color: var(--color1);
+    border: none;
+    color: var(--white);
+    font-weight: var(--bold);
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    height: 47px;
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: ease-in;
+}
+
+button.view-menu__btn:hover, button.booking__btn:hover, button.get-offer__btn:hover, button.order-now__btn:hover {
+    opacity: 0.6;
+}
+
+
+
+button.view-menu__btn {
+    width: 137px;
+    margin-top: 20px;
+}
+
+button.get-offer__btn, button.booking__btn {
+    width: 157px;
+}
+
+button.booking__btn {
+    margin-left: 36px;
+}
+
+button.order-now__btn a {
+    color: var(--white);
+}
+
+button.order-now__btn {
+    width: 220px;
+    background-color: var(--color4);
+}
+
+
+.welcome__section {
+    margin-top: 220px;
+    padding: 0 500px 0 0;
+}
+
+.welcome__section p.welcome__section__text1 {
+    color: var(--color4);
+    font-size: 50px;
+    line-height: 50px;
+    margin-top: -22px;
+    font-weight: 600;
+}
+
+.welcome__section p.welcome__section__text2 {
+    color: var(--color4);
+    font-size: 80px;
+    line-height: 80px;
+    margin-top: -54px;
+    font-weight: 600;
+}
+
+.thick__straight__line {
+    border: 1px solid white;
+    width: 51px;
+    height: 0;
+}
+.welcome__section .best__food {
+    margin-top: -56px;
+   
+}
+.welcome__section .best__food div p {
+    color: white;
+    margin: 0 4px 0 4px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.bg-color__white {
+    background-color: var(--white);
+   
+}
+
+.bg-color__white .top__padding {
+    padding: 28px 20px 280px 120px;
+}
+
+.relative__container {
+    position: relative;
+}
+
+
+.bg-hero3 .check__menu .hamburger__menu .relative__container .recommend-wrapper {
+    background-color: var(--color4);
+    width: 124px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+}
+
+.bg-hero3 .check__menu .hamburger__menu .relative__container p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: var(--bold);
+}
+
+.bg-color__white .top__padding .relative__container .card__container  {
+    position: absolute;
+    top: -84px;
+    width: 100%;
+    
+}
+.bg-color__white .top__padding .relative__container .card__container > div{
+    background-color: whitesmoke;
+    width: 320px;
+    text-align: center;
+    border: 1px solid white;
+    z-index: 2;
+    box-shadow: 20px 20px 100px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    transition: transform .2s;
+    
+}
+
+.bg-color__white .top__padding .relative__container .card__container > div:hover, section .check__menu .hamburger__menu > div:hover{
+   transform: scale(1.03);
+}
+
+section .check__menu .hamburger__menu > div:hover {
+    border-radius: 20px;
+}
+
+
+
+
+.bg-color__white .top__padding .relative__container .card__container p.card-text, 
+.bg-color__white .top__padding .relative__container .card__container p.card-subtext {
+    font-size: 26px;
+    line-height: 26px;
+    margin-top: -4px;
+}
+.bg-color__white .top__padding .relative__container .card__container p.card-text {
+    color: var(--color3);
+   
+}
+
+.bg-color__white .top__padding .relative__container .card__container p.card-subtext {
+    color: #656363;
+    font-size: 22px;
+    line-height: 26px;
+   
+}
+p.card-text span {
+    color: var(--color4);
+}
+
+.cookie {
+    font-family: "Cookie";
+}
+
+section.story p.story-header__text,  section .food-gallery__text, .offers__section .offers__text, p.chef-text{
+    color: black;
+    font-size: 54px;
+    line-height: 60px;
+}
+
+section.story p span, .offers__section .offers__text span, section .food-gallery__text span, p.chef-text span, section .bg-hero4 .reservation__container p span {
+    color: #d7833d;
+}
+
+section.story p.story-sub__text {
+    margin-top: -36px;
+    color: #656363;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.beverages_food__section {
+    padding: 0 60px 20px 40px;
+}
+
+.paragraph1 {
+    color: var(--color2);
+    font-size: 40px;
+    line-height: 54px;
+    font-weight: 600;
+}
+
+.paragraph2 {
+    color: #000000;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: -40px;
+    font-weight: 600;
+}
+
+.story .image__wrapper {
+    margin-top: 40px;
+}
+
+.pic1__div {
+    z-index: 2;
+    margin-top: 32px;
+}
+
+
+.pic2__div {
+    margin-left: -76px;
+}
+
+.pic3__div {
+    margin-top: -240px;
+    margin-left: 320px;
+    z-index: 2;
+}
+
+section.bg-hero2 {
+    background-image: url("images/Hero\ img2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section .celebrate__section {
+    padding-top: 84px;
+    padding-bottom: 72px;
+}
+
+.bg-hero2__text {
+    color: var(--color4);
+    font-size: 52px;
+    line-height: 58px;
+}
+.bg-hero__subtext {
+    color: var(--white);
+    font-weight: var(--bold);
+    font-size: 20px;
+    line-height: 33px;
+    margin-top: -60px;
+}
+
+button.get-offer__btn a {
+    color: var(--white);
+}
+button.get-offer__btn {
+    margin-top: 40px;
+}
+
+section .offers__section {
+    margin-top: 80px;
+}
+
+section .offers__section .pizza__section, section.bg-hero3 {
+    margin-top: 148px;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+section .offers__section .pizza__section .pie__wrapper {
+    margin-left: auto;
+}
+
+section .offers__section .pizza__section .pie__wrapper .spicy__div {
+    margin-left: 20px;
+} 
+
+p.pie-text, p.onion-pie__amount {
+    color: #000000;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 600;
+}
+
+p.pie-subtext {
+    color: #000000;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: -20px;
+}
+
+p.dash-paragraph {
+    color: #494949;
+    font-weight: var(--bold);
+    padding: 0 12px;
+}
+
+section.bg-hero3 {
+    background-image: url("images/Hero\ img3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p.check-menu__text, section .bg-hero4 .reservation__container p {
+    font-size: 54px;
+    line-height: 60px;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0,25);
+    color: var(--white);
+}
+
+p.check-menu__text span {
+    color: #000000;
+}
+
+section .check__menu {
+    padding-top: 28px;
+    padding-bottom: 200px;
+}
+
+section .check__menu .hamburger__menu {
+    padding-top: 88px;
+   
+}
+
+section.bg-hero3 .check__menu .hamburger__menu > div {
+    width: 350px;
+    height: 510px;
+    background-color: var(--white);
+    transition: transform .2s;
+}
+
+section .check__menu .hamburger__menu .hamburger-food__wrapper {
+    margin-top: 80px;
+}
+section .check__menu .hamburger__menu .hamburger-food__wrapper .relative__container .hamburger-price-white-border {
+    border: 7px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -116px;
+    left: 188px;
+}
+
+section .check__menu .hamburger__menu .hamburger-food__wrapper .relative__container .hamburger-price-white-border .hamburger-price-yellow-background {
+    border: 7px solid var(--color4);
+    width: 80px;
+    height: 80px;
+    background-color: var(--color4);
+    border-radius: 50%;
+}
+
+section .check__menu .hamburger__menu .hamburger-food__wrapper .relative__container .hamburger-price-white-border .hamburger-price-yellow-background p {
+    font-size: 30px;
+    line-height: 33px;
+    color: var(--white);
+    font-weight: 200;
+}
+
+p.hamburger-last__paragraph {
+    color: #000000;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.testimonial__container {
+    background-color: #e5e5e5;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+p.testimonial-header-text {
+    color: #000000;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 27px;
+    font-weight: var(--bold);
+}
+
+.profile-text {
+    color: #000000;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: -2px;
+}
+
+p.profile-subtext {
+    margin-top: -20px;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+span.ash-ellipse, span.yellow-ellipse {
+    display: inline-block;
+}
+
+span.yellow-ellipse {
+    width: 5px;
+    height: 5px;
+    border: 1px solid #FF7400;
+    border-radius: 50%;
+    
+}
+
+span.ash-ellipse {
+    width: 5px;
+    height: 5px;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    margin-top: -40px;
+}
+
+p.chef-text {
+    margin: 80px 0 72px 0;
+}
+
+section .bg-hero4 {
+    background-image: url("images/Hero\ img4.svg");
+    padding-top: 40px;
+    padding-bottom: 120px;
+    margin-top: 68px;
+}
+
+section .bg-hero4 .reservation__container .white__div {
+    width: 490px;
+    height: 296px;
+}
+
+
+@media screen and (max-width: 768px) {
+  header, section.story, section .celebrate__section,
+  section .offers__section,section .check__menu,
+  section .testimonial__container, section .food-chef__container, section .bg-hero4{
+     padding-right: 12px;
+     padding-left: 12px;
+   }
+
+  .welcome__section {
+     padding: 0;
+  }
+
+  .welcome__section p.welcome__section__text1 {
+     font-size: 32px;
+  }
+
+  .welcome__section p.welcome__section__text2 {
+     font-size: 40px;
+  }
+
+  .bg-color__white .top__padding {
+     padding: 0 12px 0 28px;
+  }
+
+  .sm {
+     flex-direction: column;
+  } 
+
+  .bg-color__white .top__padding .relative__container .card__container > div{
+     margin-top: 20px;
+  }
+
+  section.story {
+      padding-top: 896px;
+  } 
+
+  .story .image__wrapper {
+      width: 100%;
+  }
+
+  section .celebrate__section {
+      text-align: center;
+  }
+  section .offers__section .pizza__section div.fried-egg img {
+      width: 100%;
+
+  }
+
+  section .offers__section .pizza__section .pie__wrapper {
+      margin-left: 0;
+  }
+
+  section .offers__section .pizza__section .pie__wrapper .dash-wrapper {
+      display: none;
+  }
+
+  p.onion-pie__amount {
+      margin-top: -8px;
+  }
+  .sm-mt-40 {
+      margin-top: 40px;
+  }
+
+  section.bg-hero3 .check__menu .hamburger__menu > div {
+      width: 99%;
+  }
+
+  .img-group1 img {
+      margin-top: 16px;
+  }
+
+section .bg-hero4 .reservation__container .white__div , .header-section__image__wrapper{
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 576.68px) and (max-width: 768px) {
+  header, section.story, section .celebrate__section,
+  section .offers__section,section .check__menu,
+  section .testimonial__container, section .food-chef__container, section .bg-hero4{
+     padding-right: 160px;
+     padding-left: 120px;
+   }
+
+   .img-group1 img {
+    margin-top: 16px;
+    width: 93%;
+  }
+
+  .bg-color__white .top__padding {
+    padding: 28px 20px 280px 120px;
+  }
+
+}
+
+@media screen and (min-width: 768.98px) and (max-width: 1009px) {
+  .welcome__section {
+    padding: 0;
+  }
+  .bg-color__white .top__padding {
+      padding-left: 40px;
+  }
+  section.story {
+      padding-top: 700px;
+  }
+
+  .ld {
+      flex-direction: column;
+  }
+
+  .bg-color__white .top__padding .relative__container .card__container > div{
+     margin-top: 20px;
+  }
+
+  section .celebrate__section, section .offers__section,section .check__menu,
+  section .testimonial__container, section .food-chef__container, section .bg-hero4,  section.story {
+      padding-left: 20px;
+   }
+
+   section .offers__section .pizza__section .pie__wrapper .dash-wrapper {
+     display: none;
+   }
+
+   .fried-egg img {
+       width: 100%;
+   }
+
+   .ld-mt-0 {
+       margin-top: 0;
+   }
+
+   .ld-mt-40 {
+       margin-top: 40px;
+   }
+
+   .img-group1 img {
+    margin-top: 16px;
+    width: 70%;
+   }
+
+   section .offers__section .pizza__section .pie__wrapper {
+       margin-left: 2px;
+   }
+
+}
+@media screen and (min-width: 1009.98px) and (max-width: 1279.98px) {
+    .welcome__section {
+        padding: 0;
+      }
+
+      .bg-color__white .top__padding {
+        padding-left: 40px;
+    }
+
+    section .celebrate__section, section .offers__section,section .check__menu,
+    section .testimonial__container, section .food-chef__container, section .bg-hero4,  section.story {
+      padding-left: 20px;
+      padding-right: 4px;
+   }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1330px) {
+    header, section.story, section .celebrate__section,
+   section .offers__section,section .check__menu,
+   section .testimonial__container, section .food-chef__container, section .bg-hero4{
+    padding-right: 84px;
+    padding-left: 80px;
+   }
+
+}
